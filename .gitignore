@@ -6,3 +6,6 @@ www/*
 !www/localhost/
 logs/*
 .env
+services/nginx/conf.d/
+services/nginx/fastcgi_params
+docker-compose.yml

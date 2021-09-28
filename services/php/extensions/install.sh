@@ -521,6 +521,15 @@ if [[ -z "${EXTENSIONS##*,redis,*}" ]]; then
         docker-php-ext-enable redis
     fi
 fi
+if [[ -z "${EXTENSIONS##*,tideways,*}" ]]; then
+    echo "---------- Install tideways ----------"
+        mkdir tideways \
+        && tar -xf tideways-4.1.7.tar.gz -C tideways --strip-components=1 \
+        && ( cd tideways && phpize && ./configure && make ${MC} && make install ) \
+        && docker-php-ext-enable tideways
+    else
+       echo "---------- PHP Version>= 7.0----------"
+fi
 
 if [[ -z "${EXTENSIONS##*,apcu,*}" ]]; then
     echo "---------- Install apcu ----------"

@@ -46,7 +46,7 @@ services:
       - ${PHP_LOG_DIR}:/var/log/php
       - ${DATA_DIR}/composer:/tmp/composer
     environment:
-      APP_ENV: "$LARAVEL_ENV"
+      APP_ENV: "$APP_ENV"
     restart: always
     cap_add:
       - SYS_PTRACE

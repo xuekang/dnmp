@@ -613,10 +613,17 @@ if [[ -z "${EXTENSIONS##*,swoole,*}" ]]; then
     isPhpVersionGreaterOrEqual 7 0
 
     if [[ "$?" = "1" ]]; then
-        installExtensionFromTgz swoole-4.6.0
+#        installExtensionFromTgz swoole-4.6.0
+        tgzName=swoole-4.6.0
     else
-        installExtensionFromTgz swoole-2.0.11
+#        installExtensionFromTgz swoole-2.0.11
+        tgzName=swoole-2.0.11
     fi
+    extensionName="${tgzName%%-*}"
+    mkdir ${extensionName}
+    tar -xf ${tgzName}.tgz -C ${extensionName} --strip-components=1
+    ( cd ${extensionName} && phpize && ./configure --enable-openssl --enable-http2 --enable-swoole-curl && make ${MC} && make install )
+    docker-php-ext-enable ${extensionName}
 fi
 
 if [[ -z "${EXTENSIONS##*,zip,*}" ]]; then

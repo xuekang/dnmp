@@ -29,7 +29,8 @@ cp services/nginx/example.fastcgi_params  services/nginx/fastcgi_params
   
 (4) 启动服务
 ```
-docker-compose up -d  
+docker-compose up -d
+(docker-compose up -d --build  重新构建,丢弃缓存)
 ```
 (5) 查看服务运行状态(State均为Up表示所有服务都正常启动)
 ```

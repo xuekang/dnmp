@@ -44,7 +44,7 @@ docker-compose ps
 cd www
 git clone http://172.16.26.197:15566/houduan/oa3.git 
 ```
-(2) 安装姓名依赖
+(2) 安装相关依赖
 ```
 docker exec dnmp-php /bin/sh -c 'cd oa3 && composer install'
 ```

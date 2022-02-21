@@ -11,7 +11,7 @@
 
 (6) [下载安装 Cmder客户端](https://cmder.net/)（使用Docker命令更加友好，非必须）
 
-## 部署Swoole集成环境
+## 搭建集成环境
 (1) 下载项目
 ```
 git clone git@github.com:xuekang/dnmp.git

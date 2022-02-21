@@ -57,20 +57,20 @@ services:
       - "9002:9002"
       - "9003:9003"
 
-#  mysql:
-#    image: mysql:${MYSQL_VERSION}
-#    container_name: ${PREFIX}-mysql
-#    ports:
-#      - "${MYSQL_HOST_PORT}:3306"
-#    volumes:
-#      - ${MYSQL_CONF_FILE}:/etc/mysql/conf.d/mysql.cnf:ro
-#      - ${DATA_DIR}/mysql:/var/lib/mysql/:rw
-#    restart: always
-#    networks:
-#      - default
-#    environment:
-#      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
-#      TZ: "$TZ"
+  mysql:
+    image: mysql:${MYSQL_VERSION}
+    container_name: ${PREFIX}-mysql
+    ports:
+      - "${MYSQL_HOST_PORT}:3306"
+    volumes:
+      - ${MYSQL_CONF_FILE}:/etc/mysql/conf.d/mysql.cnf:ro
+      - ${DATA_DIR}/mysql:/var/lib/mysql/:rw
+    restart: always
+    networks:
+      - default
+    environment:
+      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+      TZ: "$TZ"
 
 
 #  openresty:
@@ -274,5 +274,5 @@ services:
 #    networks:
 #      - default
 
-networks:
-  default:
+  networks:
+    default:

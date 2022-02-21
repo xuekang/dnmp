@@ -2,9 +2,9 @@
 (1) [下载安装 Docker客户端](https://docs.docker.com/desktop/windows/release-notes/)
 
 (2) 开启hyper_v（硬件虚拟化技术(Hardware Virtualization Technology)）
-```
-在<控制面板-程序和功能-启用或关闭Windows功能>中，勾选Hyper-V和Internet Explorer11
-```
+
+* 在<控制面板-程序和功能-启用或关闭Windows功能>中，勾选Hyper-V和Internet Explorer11
+
 
 (3) [下载安装 the Linux kernel update package](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
 
@@ -32,8 +32,8 @@ cp services/nginx/example.fastcgi_params  services/nginx/fastcgi_params
   
 (4) 启动服务
 ```
-docker-compose up -d
-(docker-compose up -d --build  重新构建,丢弃缓存)
+docker-compose up -d 
+//docker-compose up -d --build  //重新构建,丢弃缓存
 ```
 (5) 查看服务运行状态(State均为Up表示所有服务都正常启动)
 ```

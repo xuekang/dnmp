@@ -2,7 +2,6 @@
 (1) 开启hyper_v（硬件虚拟化技术(Hardware Virtualization Technology)）
 * 在<控制面板-程序和功能-启用或关闭Windows功能>中，勾选Hyper-V和Internet Explorer11
 
-
 (2) [下载安装 the Linux kernel update package](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
 
 (3) [下载安装Docker的windows客户端](https://docs.docker.com/desktop/windows/release-notes/)
